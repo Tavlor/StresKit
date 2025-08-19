@@ -175,8 +175,11 @@ FIRESTARTER
 
 The ``build.py`` script can be used to build the ISO. It is designed to run on [ubuntu-22.04](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#choosing-github-hosted-runners) for GitHub actions, but you can use a Linux distro of your choice.
 
+It requires `mkisofs` and `p7zip-full`, plus python 3.12 (or 3.10, which is the version included with ubuntu 22.04)
+
 ```bash
 git clone https://github.com/valleyofdoom/StresKit.git
 cd StresKit/
+pip install -r requirements.txt
 python build.py
 ```
